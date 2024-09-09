@@ -17,9 +17,6 @@ COPY . .
 # Build the Vite app
 RUN npm run build
 
-
-COPY --from=build /app/dist .
-
 # Install serve to serve the built files
 RUN npm install -g serve
 
@@ -27,4 +24,4 @@ RUN npm install -g serve
 EXPOSE 5000
 
 # Command to run the application
-CMD ["serve", "-s", ".", "-l", "5000"]
+CMD ["serve", "-s", "./dist", "-l", "5000"]
