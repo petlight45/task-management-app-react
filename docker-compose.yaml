@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: ./devops/docker/react/Dockerfile
     image: frontend:latest
-    command: bash -c "vite preview --host 0.0.0.0 --port 5000"
+    command: bash -c "npm run dev"
     env_file:
       - .env
     ports:
