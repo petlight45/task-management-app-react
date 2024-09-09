@@ -21,4 +21,4 @@ RUN npm run build
 EXPOSE 5000
 
 # Command to run the application
-CMD ["vite", "preview", "--host" ,"0.0.0.0:5000"]
+CMD ["vite", "preview", "--host" ,"0.0.0.0:5000", "--port", "5000"]
