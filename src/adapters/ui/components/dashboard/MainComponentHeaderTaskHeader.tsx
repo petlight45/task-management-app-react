@@ -13,7 +13,7 @@ const MainComponentHeaderTaskHeader: React.FC<MainComponentHeaderTaskHeaderProps
 
         <div className={"ml-6 flex flex-row justify-between items-center w-full"}>
             <div className="flex flex-row space-x-5 > * + * items-center ">
-                <div className={"text-textColor-4 font-semibold text-5xl "}>
+                <div className={"text-textColor-4 font-semibold text-4xl "}>
                     {props.taskCategoryName}
                 </div>
                 <div
