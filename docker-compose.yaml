@@ -3,7 +3,7 @@ services:
   app:
     build:
       context: .
-      dockerfile: ./devops/docker/django/Dockerfile
+      dockerfile: ./devops/docker/react/Dockerfile
     image: frontend:latest
     command: bash -c "serve -s . -l 5000"
     env_file:
