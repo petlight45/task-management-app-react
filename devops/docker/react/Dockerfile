@@ -24,4 +24,4 @@ RUN npm install -g serve
 EXPOSE 5000
 
 # Command to run the application
-CMD ["serve", "-s", "./dist", "-l", "5000"]
+CMD ["vite", "preview", "0.0.0.0:5000"]
