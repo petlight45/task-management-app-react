@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./devops/docker/django/Dockerfile
+    image: frontend:latest
+    command: bash -c "serve -s . -l 5000"
+    env_file:
+      - envs/.env
