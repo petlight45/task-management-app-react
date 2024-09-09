@@ -18,7 +18,7 @@ COPY . .
 RUN npm run build
 
 # Install serve to serve the built files
-RUN npm install -g serve
+RUN npm install serve
 
 # Expose the port on which the app will run
 EXPOSE 5000
