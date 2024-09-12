@@ -1,8 +1,7 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {User} from "../../../core/entities/User";
-import {Task} from "../../../core/entities/Task";
 
-interface UserState {
+export interface UserState {
     user: User | null;
     allUsers: User[];
 
@@ -23,7 +22,7 @@ const userSlice = createSlice({
         logoutUser(state) {
             state.user = null;
         },
-        setAllUsers(state, action: PayloadAction<Task[]>) {
+        setAllUsers(state, action: PayloadAction<User[]>) {
             state.allUsers = action.payload as [];
         },
     },

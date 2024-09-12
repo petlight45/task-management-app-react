@@ -1,7 +1,7 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {Task} from "../../../core/entities/Task";
 
-interface TaskState {
+export interface TaskState {
     tasks: Task[];
     tasksToday: Task[];
     tasksTomorrow: Task[];
