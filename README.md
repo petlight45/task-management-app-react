@@ -1,50 +1,69 @@
-# React + TypeScript + Vite
+# Task Management Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React.js web app written in TypeScript, following Hexagonal Architecture and using Awilix for Dependency Injection. It employs Tailwind for styling.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Hexagonal Architecture**: Organized code into distinct layers for better maintainability and scalability.
+- **Awilix**: Dependency Injection container for managing application dependencies.
+- **React Query and Axios**: API Calls and query management.
+- **Redux Toolkit**: Effective State management.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Table of Contents
 
-- Configure the top-level `parserOptions` property like this:
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Running the Server](#running-the-server)
+- [Testing](#testing)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Installation
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+To get started with this project, follow these steps:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. **Clone the Repository**
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+   ```bash
+   https://github.com/petlight45/task-management-app-react.git
+   cd task-management-app-react 
+   
+## Configuration
+   
+1. **Set up environmental variables**
+
+   ```bash
+   cp .env.example .env
+ Update the .env file with your local configuration values.
+ 
+ VITE_HTTP_SERVER_BASE_URL=The base endpoint url of the HTTP server this frontend app makes API requests to
+ 
+ 
+ VITE_WS_SERVER_BASE_URL=The base endpoint url of the WS server this frontend app establishes a WS connection with
+ 
+ 
+ ## Running the Server
+ 
+ To run the server:
+ 
+ Install docker and docker compose on your operating environment
+ 
+ Run this
+ 
+    ```bash
+    docker-compose up --build
+    
+Or this, in case the above did not work
+
+      ```bash
+      docker compose up --build
+
+## Testing
+ 
+ To run the unit tests and integration tests:
+ 
+ Run this
+ 
+    ```bash
+    npm install
+    npm test
+    
